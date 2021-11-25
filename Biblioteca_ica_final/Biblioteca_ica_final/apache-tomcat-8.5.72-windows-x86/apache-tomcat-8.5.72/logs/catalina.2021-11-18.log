@@ -1,0 +1,100 @@
+18-Nov-2021 11:01:10.016 WARNING [main] org.apache.catalina.core.AprLifecycleListener.init The Apache Tomcat Native library failed to load. The error reported was [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform]
+	java.lang.UnsatisfiedLinkError: C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+		at java.base/jdk.internal.loader.NativeLibraries.load(Native Method)
+		at java.base/jdk.internal.loader.NativeLibraries$NativeLibraryImpl.open(NativeLibraries.java:383)
+		at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:227)
+		at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:169)
+		at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:310)
+		at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:282)
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2416)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:808)
+		at java.base/java.lang.System.loadLibrary(System.java:1893)
+		at org.apache.tomcat.jni.Library.<init>(Library.java:41)
+		at org.apache.tomcat.jni.Library.initialize(Library.java:173)
+		at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:195)
+		at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:104)
+		at org.apache.catalina.connector.Connector.setProtocol(Connector.java:641)
+		at org.apache.catalina.connector.Connector.<init>(Connector.java:81)
+		at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:62)
+		at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1235)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:518)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1386)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2725)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:541)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1496)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:611)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+18-Nov-2021 11:01:11.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/8.5.72
+18-Nov-2021 11:01:11.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Oct 1 2021 15:15:33 UTC
+18-Nov-2021 11:01:11.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     8.5.72.0
+18-Nov-2021 11:01:11.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+18-Nov-2021 11:01:11.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+18-Nov-2021 11:01:11.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+18-Nov-2021 11:01:11.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-16.0.1
+18-Nov-2021 11:01:11.408 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       16.0.1+9-24
+18-Nov-2021 11:01:11.409 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+18-Nov-2021 11:01:11.409 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72
+18-Nov-2021 11:01:11.409 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72
+18-Nov-2021 11:01:11.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Nov-2021 11:01:11.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+18-Nov-2021 11:01:11.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+18-Nov-2021 11:01:11.450 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Nov-2021 11:01:11.451 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Nov-2021 11:01:11.451 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\conf\logging.properties
+18-Nov-2021 11:01:11.451 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Nov-2021 11:01:11.451 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dhttp.nonProxyHosts=localhost|127.0.0.1|DESKTOP-N0VDGOC
+18-Nov-2021 11:01:11.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+18-Nov-2021 11:01:11.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Nov-2021 11:01:11.490 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+18-Nov-2021 11:01:11.490 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72
+18-Nov-2021 11:01:11.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72
+18-Nov-2021 11:01:13.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\temp
+18-Nov-2021 11:01:14.465 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+18-Nov-2021 11:01:18.301 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+18-Nov-2021 11:01:18.525 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 18518 ms
+18-Nov-2021 11:01:19.441 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+18-Nov-2021 11:01:19.446 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.72]
+18-Nov-2021 11:01:19.610 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\docs] de la aplicación web
+18-Nov-2021 11:01:22.783 WARNING [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [150] milliseconds.
+18-Nov-2021 11:01:23.027 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\docs] has finished in [3.416] ms
+18-Nov-2021 11:01:23.030 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\examples] de la aplicación web
+18-Nov-2021 11:01:30.826 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\examples] has finished in [7.797] ms
+18-Nov-2021 11:01:30.827 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\host-manager] de la aplicación web
+18-Nov-2021 11:01:31.328 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\host-manager] has finished in [500] ms
+18-Nov-2021 11:01:31.329 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\manager] de la aplicación web
+18-Nov-2021 11:01:31.987 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\manager] has finished in [658] ms
+18-Nov-2021 11:01:31.987 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\ROOT] de la aplicación web
+18-Nov-2021 11:01:32.437 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\webapps\ROOT] has finished in [450] ms
+18-Nov-2021 11:01:32.449 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Nov-2021 11:01:32.572 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 14045 ms
+18-Nov-2021 11:05:37.510 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\conf\Catalina\localhost\Biblioteca_ica.xml]
+18-Nov-2021 11:05:48.508 INFO [http-nio-8080-exec-6] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Nov-2021 11:05:49.187 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\Admin\Desktop\Biblioteca_ica_final\Biblioteca_ica_final\apache-tomcat-8.5.72-windows-x86\apache-tomcat-8.5.72\conf\Catalina\localhost\Biblioteca_ica.xml] has finished in [11.677] ms
+18-Nov-2021 11:05:49.334 INFO [http-nio-8080-exec-7] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Biblioteca_ica]] after start() had already been called. The second call will be ignored.
+18-Nov-2021 11:09:13.911 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+18-Nov-2021 11:09:13.913 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+18-Nov-2021 11:09:13.968 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+18-Nov-2021 11:09:14.911 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [Biblioteca_ica] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Nov-2021 11:09:14.914 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Biblioteca_ica] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/java.lang.Object.wait(Native Method)
+ java.base@16.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@16.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base@16.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+ java.base@16.0.1/java.lang.Thread.run(Thread.java:831)
+18-Nov-2021 11:09:15.198 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+18-Nov-2021 11:09:15.220 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

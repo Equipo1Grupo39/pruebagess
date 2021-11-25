@@ -1,0 +1,145 @@
+package controlador;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import modelo.Usuario;
+import modelo.UsuarioDAO;
+
+@WebServlet(name = "Usuariocontroller", urlPatterns = {"/usuariocontroller"})
+public class Usuariocontroller extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+    UsuarioDAO usuarioDAO = new UsuarioDAO();
+    
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+        
+        System.out.println("Hola Servlet..");
+        String action = request.getParameter("action");
+        System.out.println(action);  
+                
+        if (action == null) {
+            action = "mostrar";
+        }
+
+        try {
+            switch (action) {
+		case "index":
+			index(request, response);
+			break;
+		case "nuevo":
+			nuevo(request, response);
+			break;
+		case "register":
+			System.out.println("entro");
+			insertar(request, response);
+			break;
+		case "mostrar":
+			mostrar(request, response);
+			break;
+		case "showedit":
+			showEditar(request, response);
+			break;	
+		case "editar":
+			editar(request, response);
+			break;
+		case "eliminar":
+			eliminar(request, response);
+			break;
+		default:
+			break;
+		}			
+	} catch (SQLException e) {
+            e.getStackTrace();
+	}        
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
+
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }
+
+    
+    private void index (HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException{
+	mostrar(request, response);
+	RequestDispatcher dispatcher= request.getRequestDispatcher("/biblioteca/listarUsuarios.jsp");
+	dispatcher.forward(request, response);
+    }    
+    
+    private void insertar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+            String tipo = request.getParameter("tipo");
+            Usuario usuario;
+            
+            if(tipo.equals("A")) {
+                usuario = new Usuario(request.getParameter("usuario"), request.getParameter("cedula"), request.getParameter("nombre"), 
+                    request.getParameter("mail"), request.getParameter("telefono"), request.getParameter("direccion"),  request.getParameter("tipo"), 
+                    "A", request.getParameter("contrasena"));
+            } else {
+                usuario = new Usuario(request.getParameter("cedula"), request.getParameter("cedula"), request.getParameter("nombre"), 
+                    request.getParameter("mail"), request.getParameter("telefono"), request.getParameter("direccion"),  request.getParameter("tipo"), 
+                    "A", request.getParameter("contrasena"));
+            }
+            usuarioDAO.insertar(usuario);
+            mostrar(request, response);
+    }    
+    
+    private void nuevo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/biblioteca/crearUsuario.jsp");
+            dispatcher.forward(request, response);
+    } 
+    
+    private void mostrar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException , ServletException{
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/biblioteca/listarUsuarios.jsp");
+            List<Usuario> listaUsuario= usuarioDAO.listar();
+            request.setAttribute("lista", listaUsuario);
+            dispatcher.forward(request, response);
+    } 
+    
+    private void showEditar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+            String codigo = request.getParameter("codigo");
+            Usuario usuario = usuarioDAO.buscar(Integer.parseInt(request.getParameter("codigo")));
+            request.setAttribute("usuario", usuario);
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/biblioteca/editarUsuario.jsp");
+            dispatcher.forward(request, response);
+    }    
+    
+    private void editar(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException{
+            String codigo = request.getParameter("codigo");
+            String tipo = request.getParameter("tipo");
+            Usuario usuario;
+            
+            if(tipo.equals('A')) {
+                usuario = new Usuario(Integer.parseInt(codigo), request.getParameter("cedula"), request.getParameter("nombre"), 
+                    request.getParameter("mail"), request.getParameter("telefono"), request.getParameter("direccion"), tipo,
+                    request.getParameter("estado"), request.getParameter("contrasena"));
+            } else {
+                usuario = new Usuario(Integer.parseInt(codigo), request.getParameter("cedula"), request.getParameter("cedula"), request.getParameter("nombre"), 
+                    request.getParameter("mail"), request.getParameter("telefono"), request.getParameter("direccion"),  tipo, 
+                    request.getParameter("estado"), request.getParameter("contrasena"));
+            }
+            usuarioDAO.modificar(usuario);
+            mostrar(request, response);
+    }    
+        
+    private void eliminar(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException{
+            usuarioDAO.eliminar(Integer.parseInt(request.getParameter("codigo")));
+            mostrar(request, response);
+    }
+}
